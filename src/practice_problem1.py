@@ -5,7 +5,7 @@ This problem provides practice at:
   ***  IMPLEMENTING CLASSES.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  October 2016.
+         their colleagues and PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
@@ -39,15 +39,15 @@ def main():
     # UN-comment tests as you work the problems.
     ####################################################################
 
-#     test_init()
-#     test_append_string()
-#     test_double()
-#     test_shrink()
-#     test_double_then_shrink()
-#     test_reset()
-#     test_steal()
-#     test_get_history()
-#     test_combined_box()
+#     run_test_init()
+#     run_test_append_string()
+#     run_test_double()
+#     run_test_shrink()
+#     run_test_double_then_shrink()
+#     run_test_reset()
+#     run_test_steal()
+#     run_test_get_history()
+#     run_test_combined_box()
 
 
 ########################################################################
@@ -425,7 +425,7 @@ class Box(object):
 ########################################################################
 # The TEST functions for the  Box  class begin here.
 ########################################################################
-def test_init():
+def run_test_init():
     """ Tests the   __init__   method of the Box class. """
     print()
     print('-----------------------------------------------------------')
@@ -469,7 +469,7 @@ def test_init():
     print()
 
 
-def test_append_string():
+def run_test_append_string():
     """ Tests the   append_string   method of the Box class. """
     print()
     print('-----------------------------------------------------------')
@@ -517,7 +517,7 @@ def test_append_string():
     print()
 
 
-def test_double():
+def run_test_double():
     """ Tests the   double   method of the Box class. """
     print()
     print('-----------------------------------------------------------')
@@ -612,7 +612,7 @@ def test_double():
     print()
 
 
-def test_shrink():
+def run_test_shrink():
     """ Tests the   shrink   method of the Box class. """
     print()
     print('-----------------------------------------------------------')
@@ -658,7 +658,7 @@ def test_shrink():
     print()
 
 
-def test_double_then_shrink():
+def run_test_double_then_shrink():
     """ Tests the   double_then_shrink   method of the Box class. """
     print()
     print('-----------------------------------------------------------')
@@ -746,7 +746,7 @@ def test_double_then_shrink():
     print()
 
 
-def test_reset():
+def run_test_reset():
     """ Tests the   reset   method of the Box class. """
     print()
     print('-----------------------------------------------------------')
@@ -794,7 +794,7 @@ def test_reset():
     print()
 
 
-def test_steal():
+def run_test_steal():
     """ Tests the   steal   method of the Box class. """
     print()
     print('-----------------------------------------------------------')
@@ -861,7 +861,7 @@ def test_steal():
     print()
 
 
-def test_get_history():
+def run_test_get_history():
     """ Tests the   get_history   method of the Box class. """
     print()
     print('-----------------------------------------------------------')
@@ -956,7 +956,7 @@ def test_get_history():
     print()
 
 
-def test_combined_box():
+def run_test_combined_box():
     """ Tests the   combined_box   method of the Box class. """
     print()
     print('-----------------------------------------------------------')

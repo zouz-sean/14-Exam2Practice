@@ -2,7 +2,7 @@
 PRACTICE Test 2, practice_problem 2.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  October 2016.
+         their colleagues and PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
@@ -30,8 +30,8 @@ import simple_testing as st
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    test_practice_problem2a()
-    test_practice_problem2b()
+    run_test_practice_problem2a()
+    run_test_practice_problem2b()
 
 
 # ----------------------------------------------------------------------
@@ -39,7 +39,7 @@ def main():
 #           from the imported   simple_testing (st)   module.
 # ----------------------------------------------------------------------
 
-def test_practice_problem2a():
+def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # ------------------------------------------------------------------
     # TODO: 2. Implement this TEST function.
@@ -85,7 +85,7 @@ def practice_problem2a(sequence, delta):
     ####################################################################
 
 
-def test_practice_problem2b():
+def run_test_practice_problem2b():
     """ Tests the   practice_problem2b  function. """
     # ------------------------------------------------------------------
     # 4 tests, plus a 5th after these.

@@ -2,7 +2,7 @@
 PRACTICE Test 2, practice_problem 3.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  October 2016.
+         their colleagues and PUT_YOUR_NAME_HERE.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
@@ -32,11 +32,11 @@ import rosegraphics as rg
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    test_practice_problem3a()
-    test_practice_problem3b()
-    test_practice_problem3c()
-    test_practice_problem3d()
-    test_practice_problem3e()
+    run_test_practice_problem3a()
+    run_test_practice_problem3b()
+    run_test_practice_problem3c()
+    run_test_practice_problem3d()
+    run_test_practice_problem3e()
 
 
 def is_prime(n):
@@ -78,7 +78,7 @@ def is_prime(n):
 # ----------------------------------------------------------------------
 
 
-def test_practice_problem3a():
+def run_test_practice_problem3a():
     """ Tests the    practice_problem3a    function. """
     # ------------------------------------------------------------------
     # 6 tests.
@@ -165,7 +165,7 @@ def practice_problem3a(circles):
     ####################################################################
 
 
-def test_practice_problem3b():
+def run_test_practice_problem3b():
     """ Tests the    practice_problem3b    function. """
     # ------------------------------------------------------------------
     # 13 tests.  They use the imported   simple_testing (st)   module.
@@ -280,7 +280,7 @@ def practice_problem3b(sequence):
     ####################################################################
 
 
-def test_practice_problem3c():
+def run_test_practice_problem3c():
     """ Tests the    practice_problem3c    function. """
     # ------------------------------------------------------------------
     # 4 tests.  They use the imported   simple_testing (st)   module.
@@ -363,7 +363,7 @@ def practice_problem3c(sequence):
     ####################################################################
 
 
-def test_practice_problem3d():
+def run_test_practice_problem3d():
     """ Tests the    practice_problem3d    function. """
     # ------------------------------------------------------------------
     # 4 tests.  They use the imported   simple_testing (st)   module.
@@ -462,7 +462,7 @@ def practice_problem3d(sequence):
     ####################################################################
 
 
-def test_practice_problem3e():
+def run_test_practice_problem3e():
     """ Tests the    practice_problem3e    function. """
     # ------------------------------------------------------------------
     # 5 tests.  They use the imported   simple_testing (st)   module.

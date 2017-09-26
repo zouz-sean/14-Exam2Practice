@@ -1,5 +1,4 @@
-Here (below) is a SOLUTION to the  APPEND_STRING   method
-of practice_problem1.
+Here (below) is a SOLUTION to the  APPEND_STRING   method of practice_problem1.
 
   -- Read it, asking questions as needed
      if you do not understand it fully.

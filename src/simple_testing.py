@@ -3,7 +3,7 @@ A very simple class to make running tests a bit simpler.
 There are much stronger frameworks possible; this is a KISS framework.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         and their colleagues.  October 2015.
+         and their colleagues.
 """
 
 
