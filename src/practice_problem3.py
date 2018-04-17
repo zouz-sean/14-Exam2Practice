@@ -2,7 +2,7 @@
 PRACTICE Test 2, practice_problem 3.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Zhengxiao Zou.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
@@ -64,7 +64,7 @@ def is_prime(n):
     return True
     # ------------------------------------------------------------------
     # Students:
-    #   Do NOT touch the above  is_prime  function - it has no TODO.
+    #   Do NOT touch the above  is_prime  function - it has no TO DO.
     #   Do NOT copy code from this function.
     #
     # Instead, ** CALL ** this function as needed in the problems below.
@@ -163,6 +163,10 @@ def practice_problem3a(circles):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
+    g = 1
+    for k in range(len(circles)):
+        g = circles[k].center.x * g
+    return g
 
 
 def run_test_practice_problem3b():
@@ -278,6 +282,14 @@ def practice_problem3b(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes.
     ####################################################################
+    if len(sequence) > 1:
+        for k in range(len(sequence) - 1):
+            if sequence[k] == sequence[len(sequence) - 1]:
+                return True
+        else:
+            return False
+    elif len(sequence) == 1:
+        return False
 
 
 def run_test_practice_problem3c():
@@ -361,6 +373,11 @@ def practice_problem3c(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes.
     ####################################################################
+    list = []
+    for k in range(len(sequence)):
+        if sequence[k] == 0:
+            list = list + [k]
+    return list
 
 
 def run_test_practice_problem3d():
@@ -460,6 +477,12 @@ def practice_problem3d(sequence):
     #
     #          This solution should *** HAVE NO LOOP (no FOR). ***
     ####################################################################
+    for k in range(len(sequence)):
+        if sequence[k] == 0:
+            return k
+    else:
+        return -1
+
 
 
 def run_test_practice_problem3e():
@@ -529,6 +552,11 @@ def practice_problem3e(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   8 minutes.
     ####################################################################
+    total = 0
+    for k in range(len(sequence)):
+        if k % 2 == 0:
+            total = total + sequence[k]
+    return total
 
 
 # ----------------------------------------------------------------------

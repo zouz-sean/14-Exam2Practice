@@ -2,8 +2,8 @@
 PRACTICE Test 2, practice_problem 2.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Zhengxiao Zou.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -55,7 +55,13 @@ def run_test_practice_problem2a():
     print('--------------------------------------------------')
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
+    tests = [st.SimpleTestCase(practice_problem2a, ([9, 0, 8, 0], 4), [13, 4, 12, 4]),
+             st.SimpleTestCase(practice_problem2a, ([9, 9, 9, 9, ], 4), [13, 13, 13, 13]),
+             st.SimpleTestCase(practice_problem2a, ([4, 5, 4, 5, 4, 5, 4], 3), [7, 8, 7, 8, 7, 8, 7]),
+             st.SimpleTestCase(practice_problem2a, ([0, 0, 0], 1), [1, 1, 1]), ]
 
+
+    st.SimpleTestCase.run_tests('practice_problem2a', tests)
 
 def practice_problem2a(sequence, delta):
     """
@@ -83,6 +89,10 @@ def practice_problem2a(sequence, delta):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ####################################################################
+    list = []
+    for k in range(len(sequence)):
+        list = list + [delta + sequence[k]]
+    return list
 
 
 def run_test_practice_problem2b():
@@ -177,6 +187,13 @@ def practice_problem2b(sequence):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
+    s = ''
+    for k in sequence:
+        if len(k) == 0:
+            print('')
+        else:
+            s = s + str(k[0])
+    return s
 
 
 # ----------------------------------------------------------------------

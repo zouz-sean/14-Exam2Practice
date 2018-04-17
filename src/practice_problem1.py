@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  IMPLEMENTING CLASSES.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Zhengxiao Zou.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -34,20 +34,23 @@ import sys
 
 def main():
     """ Calls the   TEST   functions in this module. """
+    word = ('a','b','c')
+    print(word)
 
+    print(word.count)
     ####################################################################
     # UN-comment tests as you work the problems.
     ####################################################################
 
-#     run_test_init()
-#     run_test_append_string()
-#     run_test_double()
-#     run_test_shrink()
-#     run_test_double_then_shrink()
-#     run_test_reset()
-#     run_test_steal()
-#     run_test_get_history()
-#     run_test_combined_box()
+    run_test_init()
+    run_test_append_string()
+    run_test_double()
+    run_test_shrink()
+    run_test_double_then_shrink()
+    run_test_reset()
+    run_test_steal()
+    run_test_get_history()
+    run_test_combined_box()
 
 
 ########################################################################
@@ -102,6 +105,15 @@ class Box(object):
         #    DIFFICULTY:      3
         #    TIME ESTIMATE:   5 minutes.
         # --------------------------------------------------------------
+        self.contents = contents
+        self.volume = volume
+        self.initial_contents = contents
+        self.initial_volume = volume
+        self.A = contents
+        self.B = volume
+        self.history = []
+        if len(self.contents) > volume:
+            self.contents = ''
 
     def append_string(self, additional_contents):
         """
@@ -156,6 +168,18 @@ class Box(object):
         #       Read_this_ONLY_when_asked_Part_2.txt
         #    and continue working on the problem.
         # --------------------------------------------------------------
+        self.contents = self.contents + additional_contents
+        clipped = ""
+        s = ""
+        if len(self.contents) > self.volume:
+            for k in range(self.volume):
+                s = s + self.contents[k]
+            for k in range(self.volume, len(self.contents)):
+                clipped = clipped + self.contents[k]
+            self.contents = s
+            return clipped
+        else:
+            return clipped
 
     def double(self):
         """
@@ -203,6 +227,7 @@ class Box(object):
         # FOR FULL CREDIT, YOUR SOLUTION MUST BE NO MORE THAN
         #    ** TWO **   LINES OF CODE.
         ################################################################
+        return self.append_string(self.contents)
 
     def shrink(self, new_volume):
         """
@@ -251,6 +276,18 @@ class Box(object):
         # IMPORTANT: Write a solution to this problem in pseudo-code,
         # and THEN translate the pseudo-code to a solution.
         # --------------------------------------------------------------
+        clipped = ""
+        s = ""
+        self.volume = new_volume
+        if new_volume < len(self.contents):
+            for k in range(new_volume):
+                s = s + self.contents[k]
+            for k in range(new_volume, len(self.contents)):
+                clipped = clipped + self.contents[k]
+            self.contents = s
+            return clipped
+        else:
+            return clipped
 
     def double_then_shrink(self, new_volume):
         """
@@ -304,6 +341,18 @@ class Box(object):
         #    DIFFICULTY:      5
         #    TIME ESTIMATE:   5 minutes.
         # --------------------------------------------------------------
+        if len(self.initial_contents) * 2 - self.initial_volume > 0:
+            a = len(self.initial_contents) * 2 - self.initial_volume
+        else:
+            a = 0
+        self.double()
+        if len(self.contents) - new_volume > 0:
+            s = len(self.contents) - new_volume
+        else:
+            s = 0
+        self.shrink(new_volume)
+
+        return s + a
 
     def reset(self):
         """
@@ -323,6 +372,12 @@ class Box(object):
         #    DIFFICULTY:      4
         #    TIME ESTIMATE:   5 minutes.
         # --------------------------------------------------------------
+        self.history = self.history + [self.contents]
+        self.contents = self.A
+        self.volume = self.B
+        if len(self.contents) > self.volume:
+            self.contents = ''
+
 
     def steal(self, other_box):
         """
@@ -355,6 +410,8 @@ class Box(object):
         # FOR FULL CREDIT, YOUR SOLUTION MUST BE NO MORE THAN
         #    ** TWO **   LINES OF CODE.
         ################################################################
+        E = self.append_string(other_box.contents)
+        other_box.contents = E
 
     def get_history(self):
         """
@@ -394,6 +451,7 @@ class Box(object):
         #    DIFFICULTY:      6
         #    TIME ESTIMATE:   5 minutes.
         # --------------------------------------------------------------
+        return self.history
 
     def combined_box(self, other_box):
         """
@@ -420,6 +478,8 @@ class Box(object):
         #    DIFFICULTY:      4
         #    TIME ESTIMATE:   5 minutes.
         # --------------------------------------------------------------
+        a = Box(self.contents + other_box.contents, self.volume + other_box.volume)
+        return a
 
 
 ########################################################################
